@@ -1,0 +1,11 @@
+# the command to run inside the git repo of the project to bootstrap it for the build process
+script: /bin/sh foo.sh
+# the location of the packages inside the git repo that the app expects to be in the OS
+packages: packages.txt
+# the name of the directory containing the files that should be copied recursively into the OS
+customfiles: somedir/customfiles
+# the location where this source tree should be copied (sans .git, and customfiles)
+app_dir: /opt/sirb
+flavors:
+  chop-production:
+    some_var: foo
