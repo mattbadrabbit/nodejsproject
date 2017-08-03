@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# PROVIDE: {{ app_name }}
+# REQUIRE: NETWORKING SERVERS DAEMON
+# BEFORE:  LOGIN
+# KEYWORD: shutdown
+
+# Taken from http://habrahabr.ru/post/137857/
+
+. /etc/rc.subr
+
+name="{{ app_name }}"
+node="/usr/local/bin/node"
+workdir="{{ apt_dir }}"
+script="index.js"
+
+rcvar={{ app_name }}_enable
+#extra_commands="status"
+
+start_cmd="start"
+#status_cmd="status"
+#stop_cmd="stop"
+#restart_cmd="restart"
+
+load_rc_config $name
+eval "${rcvar}=\${${rcvar}:-'NO'}"
+
+start()
+{
+  su -m nobody -c "${node} ${workdir}/${script} >& /tmp/node.log &"
+}
+
+#status()
+#{
+#  su -m nodejs -c "exec ${forever} list"
+#}
+#
+#stop()
+#{
+#  su -m nodejs -c "exec ${forever} --sourceDir ${workdir} stop ${script}"
+#}
+#
+#restart()
+#{
+#  su -m nodejs -c "exec ${forever} --sourceDir ${workdir} restart ${script}"
+#}
+
+run_rc_command "$1"
