@@ -11,7 +11,7 @@
 
 name="{{ app_name }}"
 node="/usr/local/bin/node"
-workdir="{{ apt_dir }}"
+workdir="{{ app_dir }}"
 script="index.js"
 
 rcvar={{ app_name }}_enable
