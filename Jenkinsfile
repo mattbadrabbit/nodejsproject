@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh '/root/matt/build.py --repo=file://$WORKSPACE --in-place --flavor=chop-production --customfiles=git@github.com:/BadRabbitCode/os-templates.git --force'
             }
         }
         stage('Test') {
