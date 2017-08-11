@@ -2,7 +2,8 @@
 name: nodejsproject
 script: ./foo.sh
 # the location of the packages inside the git repo that the app expects to be in the OS
-packages: packages.txt
+packages:
+  - python36
 # the name of the directory containing the files that should be copied recursively into the OS
 customfiles: somedir/customfiles
 # the location where this source tree should be copied (sans .git, and customfiles)
