@@ -44,3 +44,4 @@ foo
 foo
 hi
 hi
+hi
