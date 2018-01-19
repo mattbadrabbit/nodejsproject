@@ -12,5 +12,13 @@ flavors:
   # the flavor built by default by the automated build system
   default:
     some_var: foo
+    build_hostname: foo.bar.example.com
+    deployable_hostnames:
+        - foo2.bar.example.com
+        - foo3.bar.example.com
   chop-production:
     some_var: foo
+    build_hostname: chop.bar.example.com
+    deployable_hostnames:
+        - chop1.bar.example.com
+        - chop2.bar.example.com
