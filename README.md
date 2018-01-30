@@ -66,3 +66,4 @@ foo
 hi
 hi
 hi
+hi
