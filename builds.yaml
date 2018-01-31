@@ -1,5 +1,6 @@
 # the command to run inside the git repo of the project to bootstrap it for the build process
 name: nodejsproject
+builds_to_keep: 2
 script: ./foo.sh
 test: cat builds.yaml
 # the location of the packages inside the git repo that the app expects to be in the OS
