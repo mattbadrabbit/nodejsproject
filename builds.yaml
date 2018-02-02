@@ -18,6 +18,7 @@ flavors:
     deployable_hostnames:
         - foo2.bar.example.com
         - foo3.bar.example.com
+    memory: 512
   chop-production:
     some_var: foo
     build_hostname: chop.bar.example.com
